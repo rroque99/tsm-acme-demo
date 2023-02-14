@@ -1,0 +1,25 @@
+apiVersion: networking.istio.io/v1beta1
+kind: VirtualService
+metadata:
+  name: acme
+spec:
+  exportTo:
+  - .
+  - istio-system
+  gateways:
+  - acme-gateway
+  hosts:
+  - "*"
+  http:
+  - name: weight-based
+    route:
+    - destination:
+        host: v1.shopping.<gns_domain>
+        port:
+          number: 3000
+      weight: 20
+    - destination:
+        host: v2.shopping.<gns_domain>
+        port:
+          number: 3000
+      weight: 80

@@ -1,0 +1,289 @@
+
+apiVersion: gns.tsm.vmware.com/v1
+kind: GNSServiceGroup
+metadata:
+  labels:
+    projectId: default
+    gnsId: rickacme-demo
+  name: sg-catalog
+spec:
+  id: sg-catalog
+  display_name: sg-catalog
+  rules:
+    fn: OR
+    match:
+    - fn: EXACT
+      key: name
+      type: NAME
+      value: catalog
+    rules: []
+  description: ''
+  color: ''
+---
+apiVersion: gns.tsm.vmware.com/v1
+kind: GNSServiceGroup
+metadata:
+  labels:
+    projectId: default
+    gnsId: rickacme-demo
+  name: sg-shopping
+spec:
+  id: sg-shopping
+  display_name: sg-shopping
+  rules:
+    fn: OR
+    match:
+    - fn: EXACT
+      key: name
+      type: NAME
+      value: shopping
+    rules: []
+  description: ''
+  color: ''
+---
+apiVersion: gns.tsm.vmware.com/v1
+kind: GNSServiceGroup
+metadata:
+  labels:
+    projectId: default
+    gnsId: rickacme-demo
+  name: sg-order
+spec:
+  id: sg-order
+  display_name: sg-order
+  rules:
+    fn: OR
+    match:
+    - fn: EXACT
+      key: name
+      type: NAME
+      value: order
+    rules: []
+  description: ''
+  color: ''
+---
+apiVersion: gns.tsm.vmware.com/v1
+kind: GNSServiceGroup
+metadata:
+  labels:
+    projectId: default
+    gnsId: rickacme-demo
+  name: sg-order-mongo
+spec:
+  id: sg-order-mongo
+  display_name: sg-order-mongo
+  rules:
+    fn: OR
+    match:
+    - fn: EXACT
+      key: name
+      type: NAME
+      value: order-mongo
+    rules: []
+  description: ''
+  color: ''
+---
+apiVersion: gns.tsm.vmware.com/v1
+kind: GNSServiceGroup
+metadata:
+  labels:
+    projectId: default
+    gnsId: rickacme-demo
+  name: sg-users
+spec:
+  id: sg-users
+  display_name: sg-users
+  rules:
+    fn: OR
+    match:
+    - fn: EXACT
+      key: name
+      type: NAME
+      value: users
+    rules: []
+  description: ''
+  color: ''
+---
+apiVersion: gns.tsm.vmware.com/v1
+kind: GNSServiceGroup
+metadata:
+  labels:
+    projectId: default
+    gnsId: rickacme-demo
+  name: sg-users-mongo
+spec:
+  id: sg-users-mongo
+  display_name: sg-users-mongo
+  rules:
+    fn: OR
+    match:
+    - fn: EXACT
+      key: name
+      type: NAME
+      value: users-mongo
+    rules: []
+  description: ''
+  color: ''
+---
+apiVersion: gns.tsm.vmware.com/v1
+kind: GNSServiceGroup
+metadata:
+  labels:
+    projectId: default
+    gnsId: rickacme-demo
+  name: sg-cart
+spec:
+  id: sg-cart
+  display_name: sg-cart
+  rules:
+    fn: OR
+    match:
+    - fn: EXACT
+      key: name
+      type: NAME
+      value: cart
+    rules: []
+  description: ''
+  color: ''
+---
+apiVersion: gns.tsm.vmware.com/v1
+kind: GNSServiceGroup
+metadata:
+  labels:
+    projectId: default
+    gnsId: rickacme-demo
+  name: sg-payment
+spec:
+  id: sg-payment
+  display_name: sg-payment
+  rules:
+    fn: OR
+    match:
+    - fn: EXACT
+      key: name
+      type: NAME
+      value: payment
+    rules: []
+  description: ''
+  color: ''
+---
+apiVersion: gns.tsm.vmware.com/v1
+kind: GNSServiceGroup
+metadata:
+  labels:
+    projectId: default
+    gnsId: rickacme-demo
+  name: sg-catalog-mongo
+spec:
+  id: sg-catalog-mongo
+  display_name: sg-catalog-mongo
+  rules:
+    fn: OR
+    match:
+    - fn: EXACT
+      key: name
+      type: NAME
+      value: catalog-mongo
+    rules: []
+  description: ''
+  color: ''
+---
+apiVersion: gns.tsm.vmware.com/v1
+kind: GNSServiceGroup
+metadata:
+  labels:
+    projectId: default
+    gnsId: rickacme-demo
+  name: sg-cart-redis
+spec:
+  id: sg-cart-redis
+  display_name: sg-cart-redis
+  rules:
+    fn: OR
+    match:
+    - fn: EXACT
+      key: name
+      type: NAME
+      value: cart-redis
+    rules: []
+  description: ''
+  color: ''
+---
+apiVersion: gns.tsm.vmware.com/v1
+kind: GNSServiceGroup
+metadata:
+  labels:
+    projectId: default
+    gnsId: rickacme-demo
+  name: sg-user-redis
+spec:
+  id: sg-user-redis
+  display_name: sg-user-redis
+  rules:
+    fn: OR
+    match:
+    - fn: EXACT
+      key: name
+      type: NAME
+      value: user-redis
+    rules: []
+  description: ''
+  color: ''
+---
+apiVersion: gns.tsm.vmware.com/v1
+kind: GNSServiceGroup
+metadata:
+  labels:
+    projectId: default
+    gnsId: rickacme-demo
+  name: sg-any
+spec:
+  id: sg-any
+  display_name: sg-any
+  rules:
+    fn: OR
+    match:
+    - fn: EXACT
+      key: name
+      type: NAME
+      value: cart
+    - fn: EXACT
+      key: name
+      type: NAME
+      value: cart-redis
+    - fn: EXACT
+      key: name
+      type: NAME
+      value: shopping
+    - fn: EXACT
+      key: name
+      type: NAME
+      value: order
+    - fn: EXACT
+      key: name
+      type: NAME
+      value: order-mongo
+    - fn: EXACT
+      key: name
+      type: NAME
+      value: payment
+    - fn: EXACT
+      key: name
+      type: NAME
+      value: users
+    - fn: EXACT
+      key: name
+      type: NAME
+      value: users-mongo
+    - fn: EXACT
+      key: name
+      type: NAME
+      value: catalog
+    - fn: EXACT
+      key: name
+      type: NAME
+      value: catalog-mongo  
+    rules: []
+  description: ''
+  color: ''
+  

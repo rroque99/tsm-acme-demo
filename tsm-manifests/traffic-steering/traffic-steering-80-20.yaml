@@ -1,0 +1,18 @@
+apiVersion: gns.tsm.vmware.com/v1
+kind: TrafficRoutingPolicy
+metadata:
+  labels:
+    gnsId: rickacme-demo
+    projectId: default
+  name: shopping-steering-80-20
+spec:
+  description: policy to split 2% of traffic to version 1 and 98% of traffic to version 2
+  service: shopping
+  traffic_policy:
+    http:
+    - name: weight-based
+      targets:
+      - service_version: v1
+        weight: 20
+      - service_version: v2
+        weight: 80

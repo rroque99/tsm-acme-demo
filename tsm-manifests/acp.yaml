@@ -1,0 +1,233 @@
+apiVersion: gns.tsm.vmware.com/v1
+kind: AccessControlPolicy
+metadata:
+  labels:
+    projectId: default
+    gnsId: rickacme-demo
+  name: allow-cart-cart-redis
+spec:
+  destination:
+    service_group:
+    - name: sg-cart-redis
+  source: 
+    service_group:
+    - name: sg-cart
+  action: ALLOW
+  match:
+  - { "port": ["6379"]}
+---
+apiVersion: gns.tsm.vmware.com/v1
+kind: AccessControlPolicy
+metadata:
+  labels:
+    projectId: default
+    gnsId: rickacme-demo
+  name: allow-payment-users
+spec:
+  destination:
+    service_group:
+    - name: sg-users
+  source: 
+    service_group:
+    - name: sg-payment
+  action: ALLOW
+  match:
+  - { "port": ["8081"]}
+---
+apiVersion: gns.tsm.vmware.com/v1
+kind: AccessControlPolicy
+metadata:
+  labels:
+    projectId: default
+    gnsId: rickacme-demo
+  name: allow-cart-users
+spec:
+  destination:
+    service_group:
+    - name: sg-users
+  source: 
+    service_group:
+    - name: sg-cart
+  action: ALLOW
+  match:
+  - { "port": ["8081"]}
+---
+apiVersion: gns.tsm.vmware.com/v1
+kind: AccessControlPolicy
+metadata:
+  labels:
+    projectId: default
+    gnsId: rickacme-demo
+  name: allow-catalog-catalog-mongo
+spec:
+  destination:
+    service_group:
+    - name: sg-catalog-mongo
+  source: 
+    service_group:
+    - name: sg-catalog
+  action: ALLOW
+  match:
+  - { "port": ["27017"]}
+---
+apiVersion: gns.tsm.vmware.com/v1
+kind: AccessControlPolicy
+metadata:
+  labels:
+    projectId: default
+    gnsId: rickacme-demo
+  name: allow-order-order-mongo
+spec:
+  destination:
+    service_group:
+    - name: sg-order-mongo
+  source: 
+    service_group:
+    - name: sg-order
+  action: ALLOW
+  match:
+  - { "port": ["27017"]}
+---
+apiVersion: gns.tsm.vmware.com/v1
+kind: AccessControlPolicy
+metadata:
+  labels:
+    projectId: default
+    gnsId: rickacme-demo
+  name: allow-order-payment
+spec:
+  destination:
+    service_group:
+    - name: sg-payment
+  source: 
+    service_group:
+    - name: sg-order
+  action: ALLOW
+  match:
+  - { "port": ["9000"]}
+---
+apiVersion: gns.tsm.vmware.com/v1
+kind: AccessControlPolicy
+metadata:
+  labels:
+    projectId: default
+    gnsId: rickacme-demo
+  name: allow-order-users
+spec:
+  destination:
+    service_group:
+    - name: sg-users
+  source: 
+    service_group:
+    - name: sg-order
+  action: ALLOW
+  match:
+  - { "port": ["8081"]}
+---
+apiVersion: gns.tsm.vmware.com/v1
+kind: AccessControlPolicy
+metadata:
+  labels:
+    projectId: default
+    gnsId: rickacme-demo
+  name: allow-shopping-cart
+spec:
+  destination:
+    service_group:
+    - name: sg-cart
+  source: 
+    service_group:
+    - name: sg-shopping
+  action: ALLOW
+  match:
+  - { "port": ["5000"]}
+---
+apiVersion: gns.tsm.vmware.com/v1
+kind: AccessControlPolicy
+metadata:
+  labels:
+    projectId: default
+    gnsId: rickacme-demo
+  name: allow-shopping-catalog
+spec:
+  destination:
+    service_group:
+    - name: sg-catalog
+  source: 
+    service_group:
+    - name: sg-shopping
+  action: ALLOW
+  match:
+  - { "port": ["8082"]}
+---
+apiVersion: gns.tsm.vmware.com/v1
+kind: AccessControlPolicy
+metadata:
+  labels:
+    projectId: default
+    gnsId: rickacme-demo
+  name: allow-shopping-order
+spec:
+  destination:
+    service_group:
+    - name: sg-order
+  source: 
+    service_group:
+    - name: sg-shopping
+  action: ALLOW
+  match:
+  - { "port": ["6000"]}
+---
+apiVersion: gns.tsm.vmware.com/v1
+kind: AccessControlPolicy
+metadata:
+  labels:
+    projectId: default
+    gnsId: rickacme-demo
+  name: allow-shopping-users
+spec:
+  destination:
+    service_group:
+    - name: sg-users
+  source: 
+    service_group:
+    - name: sg-shopping
+  action: ALLOW
+  match:
+  - { "port": ["8081"]}
+---
+apiVersion: gns.tsm.vmware.com/v1
+kind: AccessControlPolicy
+metadata:
+  labels:
+    projectId: default
+    gnsId: rickacme-demo
+  name: allow-users-users-mongo
+spec:
+  destination:
+    service_group:
+    - name: sg-users-mongo
+  source: 
+    service_group:
+    - name: sg-users
+  action: ALLOW
+  match:
+  - { "port": ["27017"]}
+---
+apiVersion: gns.tsm.vmware.com/v1
+kind: AccessControlPolicy
+metadata:
+  labels:
+    projectId: default
+    gnsId: rickacme-demo
+  name: allow-users-user-redis
+spec:
+  destination:
+    service_group:
+    - name: sg-user-redis
+  source: 
+    service_group:
+    - name: sg-users
+  action: ALLOW
+  match:
+  - { "port": ["6379"]}

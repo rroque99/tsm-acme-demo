@@ -1,0 +1,34 @@
+apiVersion: gns.tsm.vmware.com/v1
+kind: GlobalNamespace
+metadata:
+  labels:
+    projectId: default
+  name : <GNS-NAME>
+spec:
+  domain_name: <GNS-DOMAIN>
+  name: <GNS-NAME>
+  use_shared_gateway: true
+  ca: default
+  ca_type: PreExistingCA
+  match_conditions:
+  - cluster:
+      match: <CLUSTER1>
+      type: EXACT
+    namespace:
+      match: <NAMESPACE>
+      type: EXACT
+  - cluster:
+      match: <CLUSTER2>
+      type: EXACT
+    namespace:
+      match: <NAMESPACE>
+      type: EXACT  
+  - cluster:
+      match: <CLUSTER3>
+      type: EXACT
+    namespace:
+      match: <NAMESPACE>
+      type: EXACT
+  api_discovery_enabled: true
+  mtls_enforced: true
+  version: "1"
