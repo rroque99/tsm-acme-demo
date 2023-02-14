@@ -3,7 +3,7 @@ kind: AccessControlPolicy
 metadata:
   labels:
     projectId: default
-    gnsId: rickacme-demo
+    gnsId: <GNS-NAME>
   name: allow-cart-cart-redis
 spec:
   destination:
@@ -21,7 +21,7 @@ kind: AccessControlPolicy
 metadata:
   labels:
     projectId: default
-    gnsId: rickacme-demo
+    gnsId: <GNS-NAME>
   name: allow-payment-users
 spec:
   destination:
@@ -39,7 +39,7 @@ kind: AccessControlPolicy
 metadata:
   labels:
     projectId: default
-    gnsId: rickacme-demo
+    gnsId: <GNS-NAME>
   name: allow-cart-users
 spec:
   destination:
@@ -57,7 +57,7 @@ kind: AccessControlPolicy
 metadata:
   labels:
     projectId: default
-    gnsId: rickacme-demo
+    gnsId: <GNS-NAME>
   name: allow-catalog-catalog-mongo
 spec:
   destination:
@@ -75,7 +75,7 @@ kind: AccessControlPolicy
 metadata:
   labels:
     projectId: default
-    gnsId: rickacme-demo
+    gnsId: <GNS-NAME>
   name: allow-order-order-mongo
 spec:
   destination:
@@ -93,7 +93,7 @@ kind: AccessControlPolicy
 metadata:
   labels:
     projectId: default
-    gnsId: rickacme-demo
+    gnsId: <GNS-NAME>
   name: allow-order-payment
 spec:
   destination:
@@ -111,7 +111,7 @@ kind: AccessControlPolicy
 metadata:
   labels:
     projectId: default
-    gnsId: rickacme-demo
+    gnsId: <GNS-NAME>
   name: allow-order-users
 spec:
   destination:
@@ -129,7 +129,7 @@ kind: AccessControlPolicy
 metadata:
   labels:
     projectId: default
-    gnsId: rickacme-demo
+    gnsId: <GNS-NAME>
   name: allow-shopping-cart
 spec:
   destination:
@@ -147,7 +147,7 @@ kind: AccessControlPolicy
 metadata:
   labels:
     projectId: default
-    gnsId: rickacme-demo
+    gnsId: <GNS-NAME>
   name: allow-shopping-catalog
 spec:
   destination:
@@ -165,7 +165,7 @@ kind: AccessControlPolicy
 metadata:
   labels:
     projectId: default
-    gnsId: rickacme-demo
+    gnsId: <GNS-NAME>
   name: allow-shopping-order
 spec:
   destination:
@@ -183,7 +183,7 @@ kind: AccessControlPolicy
 metadata:
   labels:
     projectId: default
-    gnsId: rickacme-demo
+    gnsId: <GNS-NAME>
   name: allow-shopping-users
 spec:
   destination:
@@ -201,7 +201,7 @@ kind: AccessControlPolicy
 metadata:
   labels:
     projectId: default
-    gnsId: rickacme-demo
+    gnsId: <GNS-NAME>
   name: allow-users-users-mongo
 spec:
   destination:
@@ -219,7 +219,7 @@ kind: AccessControlPolicy
 metadata:
   labels:
     projectId: default
-    gnsId: rickacme-demo
+    gnsId: <GNS-NAME>
   name: allow-users-user-redis
 spec:
   destination:
