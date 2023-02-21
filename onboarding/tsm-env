@@ -1,0 +1,2 @@
+export TSM_TOKEN=redacted
+export TSM_URL=prod-2.nsxservicemesh.vmware.com
