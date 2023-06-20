@@ -3,11 +3,11 @@ kind: HealthCheck
 metadata:
   labels:
     projectId: default
-  name : acmeoo-vtechk8s-healthcheck
+  name : <name>-healthcheck
 spec:
-  name: acmeoo-vtechk8s-healthcheck 
+  name: <name>-healthcheck 
   protocol: HTTP
-  domain: acmeoo.vtechk8s.com
+  domain: acme.<FQDN.com>
   port: 3000
   path: "/"
   healthThreshold: 3
