@@ -1,0 +1,16 @@
+apiVersion: templates.tsm.vmware.com/v1
+kind: HealthCheck
+metadata:
+  labels:
+    projectId: default
+  name : acmeoo-vtechk8s-healthcheck
+spec:
+  name: acmeoo-vtechk8s-healthcheck 
+  protocol: HTTP
+  domain: acmeoo.vtechk8s.com
+  port: 3000
+  path: "/"
+  healthThreshold: 3
+  certificate_id: ''
+  external_port: 80
+  interval: 10
