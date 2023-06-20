@@ -2,9 +2,9 @@ apiVersion: gns.tsm.vmware.com/v1
 kind: AttackDiscovery
 metadata:
   labels:
-    gnsId: acmeoo
+    gnsId: <GNS-NAME>
     projectId: default
-  name: acmeoo-attack-discovery
+  name: <GNS-NAME>-attack-discovery
 spec:
   application:
   - paranoia_level: 1
