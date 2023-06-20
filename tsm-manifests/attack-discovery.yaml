@@ -1,0 +1,48 @@
+apiVersion: gns.tsm.vmware.com/v1
+kind: AttackDiscovery
+metadata:
+  labels:
+    gnsId: acmeoo
+    projectId: default
+  name: acmeoo-attack-discovery
+spec:
+  application:
+  - paranoia_level: 1
+    rules_groups:
+    - mode: DISABLED
+      name: SCANNER_DETECTION
+    - mode: ENABLED
+      name: PROTOCOL_VIOLATION_ENFORCEMENT
+    - mode: ENABLED
+      name: PROTOCOL_ATTACK
+    - mode: ENABLED
+      name: LOCAL_FILE_INCLUSION  
+    - mode: ENABLED
+      name: REMOTE_FILE_INCLUSION 
+    - mode: ENABLED
+      name: REMOTE_CODE_EXECUTION
+    - mode: ENABLED
+      name: PHP_INJECTION
+    - mode: ENABLED
+      name: CROSS_SITE_SCRIPTING
+    - mode: ENABLED
+      name: SQL_INJECTION
+    - mode: ENABLED
+      name: SESSION_FIXATION
+    - mode: ENABLED
+      name: DATA_LEAKAGE
+    - mode: ENABLED
+      name: SQL_DATA_LEAKAGE  
+    - mode: ENABLED
+      name: JAVA_DATA_LEAKAGE 
+    - mode: ENABLED
+      name: PHP_DATA_LEAKAGE
+    - mode: ENABLED
+      name: IIS_DATA_LEAKAGE
+  description: attach detection policy
+  selectors:
+    services: 
+    - '*'
+    all_external_services: true
+    all_public_services: true
+    all_services: true
