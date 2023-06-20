@@ -3,13 +3,13 @@ apiVersion: gns.tsm.vmware.com/v1
 kind: PublicService
 metadata:
   labels:
-    gnsId: acmecli
+    gnsId: <GNS-NAME>
     projectId: default
-  name: acme.vtechk8s.com 
+  name: acme.<FQDN.com> 
 spec:
   external_port: 80
   external_protocol: HTTP
-  fqdn: acme.vtechk8s.com
+  fqdn: acme.<FQDN.com>
   gslb:
     type: ROUND_ROBIN
   ha_policy: ''
@@ -17,13 +17,13 @@ spec:
   name: acme
   public_domain:
     certificate_id: ''
-    external_dns_id: fbe82725-c680-4bba-9ea5-5fdd46860091
-    primary_domain: vtechk8s.com
+    external_dns_id: fbe82725........ #get from TSM API
+    primary_domain: <FQDN>.com
     sub_domain: acme
   ttl: 100
   wildcard_certificate_id: ''
   healthcheck_ids:
-  - acme-vtechk8s-healthcheck 
+  - <name>-healthcheck 
 ---
 # Configure Public Service Route
 apiVersion: gns.tsm.vmware.com/v1
@@ -31,8 +31,8 @@ kind: PublicServiceRoute
 metadata:
   labels:
     projectId: default
-    gnsId: acmecli
-    fqdn: acme.vtechk8s.com
+    gnsId: <GNS-NAME>
+    fqdn: acme.<FQDN.com>
   name : shopping.3000
 spec:
   paths:
